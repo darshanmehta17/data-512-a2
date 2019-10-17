@@ -30,7 +30,7 @@ This service rates the article into one of the following 6 categories:
 | 5 | Start | Start-class Article |
 | 6 | Stub | Stub-class Article |
 
-For each article, the response would contains probability scores for each of the ranks along with a prediction which contains the symbol of the class which has the highest probability score. 
+More details on what each of these categories mean can be found [here](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_assessment#Grades). For each article, the response would contains probability scores for each of the ranks along with a prediction which contains the symbol of the class which has the highest probability score. 
 
 ## Requirements
 This analysis was prepared using Python 3.7 running in a Jupyter Notebook environment.  
@@ -43,7 +43,7 @@ The following Python packages were used and their documentation can be found at 
 - [oresapi v0.0.1](https://github.com/halfak/oresapi)
 
 ## Generated Files
-This notebook creates 2 CSV files of data extracted and compiled as part of this analysis.
+This notebook creates 3 CSV files of data extracted and compiled as part of this analysis.
 
 - [wp_wpds_politicians_by_country.csv](/wp_wpds_politicians_by_country.csv): This is the final CSV generated as a result of the data preparation section present [here](/hcds-a2-bias.ipynb#Data-Preparation). The schema of this file is described below.
 
@@ -63,6 +63,8 @@ This notebook creates 2 CSV files of data extracted and compiled as part of this
 | page | Name of the article |
 | rev_id | Revision ID of the article on Wikipedia |
 | article_quality | Quality class as determined by ORES |
+
+- [invalid_rev_ids.txt](/invalid_rev_ids.txt): This file contains a list of revision_ids for which the ORES service could not find the corresponding Wikipedia article to make the prediction on.
 
 
 ## Generated Summaries
